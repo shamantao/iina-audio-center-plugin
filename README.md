@@ -7,16 +7,6 @@ Audio-Center is an IINA plugin focused on local audio workflow:
 - sidebar-first controls
 - foundation for recursive library scan and persisted playlists
 
-## Current Stage
-
-This repository contains **Phase 1 foundation**:
-
-- plugin manifest (`Info.json`)
-- main entry (`main.js`)
-- sidebar webview UI (`ui/sidebar.html`, `ui/sidebar.css`, `ui/sidebar.js`)
-- message bus between sidebar and plugin script
-- basic actions: refresh, reveal current track, play item, remove item
-
 ## Install (Development)
 
 1. Ensure IINA 1.4.0+ is installed.
@@ -29,6 +19,16 @@ ln -s "$PWD" ~/Library/Application\ Support/com.colliderli.iina/plugins/iina-aud
 3. Restart IINA.
 4. Open IINA's regular sidebar (View -> Show Sidebar, or the sidebar button in the window toolbar).
 5. Select the `Audio-Center` tab in that sidebar.
+
+## Current Stage
+
+This repository contains **Phase 1 foundation**:
+
+- plugin manifest (`Info.json`)
+- main entry (`main.js`)
+- sidebar webview UI (`ui/sidebar.html`, `ui/sidebar.css`, `ui/sidebar.js`)
+- message bus between sidebar and plugin script
+- basic actions: refresh, reveal current track, play item, remove item
 
 ## Troubleshooting
 
@@ -49,7 +49,7 @@ find "$HOME/Library/Application Support/com.colliderli.iina/plugins" -maxdepth 1
 
 ```bash
 rm -f ~/Library/Application\ Support/com.colliderli.iina/plugins/iina-audio-center-plugin.iinaplugin-dev
-ln -s "/absolute/path/to/iina-audio-center-plugin" \
+ln -s "$PWD" \
 	~/Library/Application\ Support/com.colliderli.iina/plugins/iina-audio-center-plugin.iinaplugin-dev
 ```
 
