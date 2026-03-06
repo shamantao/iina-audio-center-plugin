@@ -1,0 +1,136 @@
+:root {
+  --bg: rgba(255, 255, 255, 0.08);
+  --panel: rgba(255, 255, 255, 0.12);
+  --text: #f0f3f7;
+  --muted: #b9c0ca;
+  --accent: #2bb1d6;
+  --danger: #ff5f6d;
+  --line: rgba(255, 255, 255, 0.14);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: rgba(245, 247, 250, 0.92);
+    --panel: #ffffff;
+    --text: #1d2936;
+    --muted: #5c6b7a;
+    --accent: #0a7fa0;
+    --danger: #b7424d;
+    --line: #d8e0e8;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  font: 13px/1.45 "Avenir Next", "Helvetica Neue", sans-serif;
+}
+
+.wrap {
+  padding: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 15px;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+input[type="text"] {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 8px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.scope-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+button {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 5px 8px;
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: var(--accent);
+}
+
+#playlistList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 280px;
+  overflow: auto;
+}
+
+.track {
+  padding: 7px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.track.current {
+  border-color: var(--accent);
+}
+
+.track-title {
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.track-meta {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.track-actions {
+  margin-top: 6px;
+  display: flex;
+  gap: 6px;
+}
+
+.track-actions button.danger:hover {
+  border-color: var(--danger);
+}
+
+.muted {
+  color: var(--muted);
+}

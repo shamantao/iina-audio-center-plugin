@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Audio-Center</title>
+    <link rel="stylesheet" href="sidebar.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>Audio-Center</h1>
+        <button id="refreshBtn" data-clickable>Refresh</button>
+      </header>
+
+      <section class="panel">
+        <h2>Search</h2>
+        <input id="searchInput" type="text" placeholder="Search title, artist, album, file..." data-clickable />
+        <div class="scope-row">
+          <label><input type="radio" name="scope" value="playlist" data-clickable /> Playlist</label>
+          <label><input type="radio" name="scope" value="library" data-clickable /> Library</label>
+          <label><input type="radio" name="scope" value="both" data-clickable /> Both</label>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Current Playback</h2>
+        <div id="statusLine" class="muted">No track</div>
+        <button id="revealBtn" data-clickable>Reveal current track</button>
+      </section>
+
+      <section class="panel">
+        <h2>Playlist</h2>
+        <ul id="playlistList"></ul>
+      </section>
+    </div>
+
+    <script src="sidebar.js"></script>
+  </body>
+</html>
