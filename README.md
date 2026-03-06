@@ -17,8 +17,11 @@ ln -s "$PWD" ~/Library/Application\ Support/com.colliderli.iina/plugins/iina-aud
 ```
 
 3. Restart IINA.
-4. Open IINA's regular sidebar (View -> Show Sidebar, or the sidebar button in the window toolbar).
-5. Select the `Audio-Center` tab in that sidebar.
+4. Ensure you are in a normal player window (not Music Mode mini UI).
+5. Open the plugin sidebar using `Plugin -> Show Plugin Sidebar`.
+6. Select the `Audio-Center` tab.
+
+Note: In Music Mode, plugin sidebar tabs may not be visible.
 
 ## Current Stage
 
