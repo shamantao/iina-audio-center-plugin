@@ -1,9 +1,9 @@
 {
   "name": "Audio-Center",
-  "identifier": "io.shamantao.iina.audio-center",
+  "identifier": "io.shamantao.iina.audiocenter",
   "version": "0.1.0",
   "author": {
-    "name": "Phil / shamantao"
+    "name": "shamantao"
   },
   "description": "Audio playlist and library center for IINA.",
   "entry": "main.js",
@@ -13,12 +13,5 @@
   "permissions": [
     "file-system",
     "show-osd"
-  ],
-  "allowedDomains": [],
-  "ghRepo": "shamantao/iina-audio-center-plugin",
-  "ghVersion": 1,
-  "preferenceDefaults": {
-    "audioCenter.scope": "both",
-    "audioCenter.lastQuery": ""
-  }
+  ]
 }
