@@ -1,5 +1,11 @@
 # IINA Audio-Center Plugin PRD
 
+## Language Policy (Mandatory)
+
+- All project documentation in this repository must be written in English.
+- All source code comments must be written in English.
+- French is allowed only for prompt conversations and interactive discussions, not for repository artifacts.
+
 ## 1. Contexte
 
 Audio-Center est un plugin IINA orienté musique locale, conçu pour améliorer la navigation, la recherche et la gestion de playlists audio dans IINA.

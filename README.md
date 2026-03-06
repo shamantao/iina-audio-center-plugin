@@ -27,7 +27,33 @@ ln -s "$PWD" ~/Library/Application\ Support/com.colliderli.iina/plugins/iina-aud
 ```
 
 3. Restart IINA.
-4. Open the sidebar tab `Audio-Center`.
+4. Open IINA's regular sidebar (View -> Show Sidebar, or the sidebar button in the window toolbar).
+5. Select the `Audio-Center` tab in that sidebar.
+
+## Troubleshooting
+
+- If `Audio-Center` tab is missing, verify dev link exists:
+
+```bash
+find "$HOME/Library/Application Support/com.colliderli.iina/plugins" -maxdepth 1 -name "*.iinaplugin-dev" -ls
+```
+
+- Expected link target for this project:
+
+```bash
+~/Library/Application Support/com.colliderli.iina/plugins/iina-audio-center-plugin.iinaplugin-dev
+-> /absolute/path/to/iina-audio-center-plugin
+```
+
+- If needed, recreate it:
+
+```bash
+rm -f ~/Library/Application\ Support/com.colliderli.iina/plugins/iina-audio-center-plugin.iinaplugin-dev
+ln -s "/absolute/path/to/iina-audio-center-plugin" \
+	~/Library/Application\ Support/com.colliderli.iina/plugins/iina-audio-center-plugin.iinaplugin-dev
+```
+
+- Then fully quit and relaunch IINA.
 
 ## Packaging
 
